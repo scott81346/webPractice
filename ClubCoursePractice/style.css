@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    background-color: rgba(250, 208, 177, 0.829);
+}
+
+table{
+    width: 60%;
+    margin: auto;
+    font-size: 1.5em;
+}
+th{
+    border:2px solid brown;
+}
+
+td{
+    border-bottom: 1px dashed blue;
+}
+
+/* tr:nth-child(2n+1) {
+    background-color: teal;
+} */
