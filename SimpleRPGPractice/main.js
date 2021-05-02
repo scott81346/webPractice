@@ -1,12 +1,13 @@
 let mapArray, ctx, currentImgMain;
 let imgMountain, imgMain, imgEnemy;
-const gridLength = 200;
+const gridLength = 150;
 
 $(function(){
     mapArray = [
-        [0,1,1],
-        [0,0,0],
-        [3,1,2]
+        [0,0,1,0],
+        [0,1,3,0],
+        [0,0,0,0],
+        [3,1,2,1]
     ]; //0-可走、1-障礙、2-終點、3-敵人
     ctx = $("#myCanvas")[0].getContext("2d");
 
@@ -91,7 +92,7 @@ $(document).on("keydown",function(event){
     console.log(`TargetImag(${targetImag.x},${targetImag.y})`);
     console.log(`TargetBlcok(${targetImag.x},${targetImag.y})`);
 
-    if(targetImag.x<=400 && targetImag.x>=0 && targetImag.y <=400 && targetImag.y >=0){
+    if(targetImag.x<=450 && targetImag.x>=0 && targetImag.y <=450 && targetImag.y >=0){
         targetBlock.x = targetImag.y / gridLength;
         targetBlock.y = targetImag.x / gridLength;
     }else{
@@ -117,7 +118,9 @@ $(document).on("keydown",function(event){
                 currentImgMain.y = targetImag.y;
                 break;
             case 3:
-                $("#talkBox").text("哈摟");
+                $("#talkBox").text("Fight!");
+                currentImgMain.x = targetImag.x;
+                currentImgMain.y = targetImag.y;
                 break;
     }
     }else{
