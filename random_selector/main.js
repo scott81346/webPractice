@@ -8,6 +8,6 @@ $(function(){
         //找到img元件
         //找到img元件的src屬性 -> 對應元件的title值
         // $("img").attr("src","https://foodpicks.tw/wp-content/uploads/2019-11-03_114250-696x406.jpg");
-        // $("img").attr("src",$("li").eq(randomChildNumber).attr("title"));
+        $("img").attr("src",$("li").eq(randomChildNumber+2).attr("title"));
     });
 });
